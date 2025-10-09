@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Avances del Proyecto - Cerradura Smart RFID-BT</title>
+<!-- Favicon -->
+<link href="https://placehold.co/32x32.png" rel="icon"/>
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<!-- Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet"/>
+<!-- Archivo CSS específico para avances -->
+<link href="CSS/avanze.css" rel="stylesheet"/>
+</head>
+<body>
+<header>
+<nav class="navbar navbar-expand-lg navbar-dark">
+<div class="container-fluid">
+<a class="navbar-brand" href="index.html">
+<i class="bi bi-shield-lock"></i> Cerradura Smart RFID-BT
+                </a>
+<button aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarNavDropdown" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNavDropdown">
+<ul class="navbar-nav me-auto">
+<li class="nav-item">
+<a class="nav-link" href="index.html#Introducción">
+<i class="bi bi-house"></i> Inicio
+                            </a>
+</li>
+<li class="nav-item">
+<a aria-current="page" class="nav-link active" href="avanze.html">
+<i class="bi bi-graph-up"></i> Avances
+                            </a>
+</li>
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button">
+<i class="bi bi-info-circle"></i> Información
+                            </a>
+<ul class="dropdown-menu">
+<li><a class="dropdown-item" href="index.html#Justificación">Justificación</a></li>
+<li><a class="dropdown-item" href="index.html#Objetivos">Objetivos</a></li>
+<li><a class="dropdown-item" href="index.html#caracteristicas">Características</a></li>
+<li><a class="dropdown-item" href="index.html#materiales">Materiales</a></li>
+<li><a class="dropdown-item" href="index.html#lenguajes">Lenguajes</a></li>
+<li><a class="dropdown-item" href="index.html#funcionamiento">Funcionamiento</a></li>
+</ul>
+</li>
+</ul>
+<ul class="navbar-nav">
+<li class="nav-item">
+<a class="nav-link" href="inicio.html">
+<i class="bi bi-gear"></i> Administración
+                            </a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+</header>
+<main class="container my-5">
+<h1 class="text-center mb-5">Bitácora de Avances del Proyecto</h1>
+<!-- INFORME DE DESARROLLO DETALLADO (CONTENIDO AGREGADO) -->
+<ul class="timeline">
+<li>
+<div class="timeline-badge"><i class="bi bi-box-seam"></i></div>
+<div class="timeline-panel">
+<div class="timeline-heading">
+<h4 class="timeline-title">Fase 1: Adquisición y Plataforma Web</h4>
+<p><small class="text-muted"><i class="bi bi-calendar-event"></i> 15 de Agosto de 2024</small></p>
+</div>
+<div class="timeline-body">
+<p>En esta etapa inicial, se sentaron las bases físicas y digitales del proyecto.</p>
+<ul>
+<li><strong>Adquisición de Componentes Físicos:</strong> Se realizó la compra de los componentes electrónicos esenciales para el prototipo, incluyendo el microcontrolador <strong>ESP32</strong>, el lector <strong>RFID-RC522</strong>, un servomotor y otros elementos periféricos. Esta adquisición fue un paso crucial para habilitar las futuras fases de ensamblaje y pruebas de hardware.</li>
+<li><strong>Desarrollo de la Estructura Web:</strong> Se maquetó la estructura fundamental del sitio web utilizando <strong>HTML5</strong> y <strong>CSS3</strong>. Se empleó el framework <strong>Bootstrap 5</strong> para asegurar un diseño responsivo y moderno. Se definieron dos páginas clave:
+                                <ul>
+<li><b>Página de Presentación (<code>index.html</code>):</b> Creada para describir el proyecto, sus objetivos y características al público.</li>
+<li><b>Panel de Administración (<code>inicio.html</code>):</b> Diseñado como la base para la futura gestión del sistema de cerradura.</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="timeline-inverted">
+<div class="timeline-badge"><i class="bi bi-code-slash"></i></div>
+<div class="timeline-panel">
+<div class="timeline-heading">
+<h4 class="timeline-title">Fase 2: Dinamismo, Backend y Despliegue</h4>
+<p><small class="text-muted"><i class="bi bi-calendar-event"></i> 22 de Agosto de 2024</small></p>
+</div>
+<div class="timeline-body">
+<p>Esta fase se centró en dar vida a la plataforma web, conectarla a un backend funcional y hacerla accesible en internet.</p>
+<ul>
+<li><strong>Implementación de Lógica con JavaScript:</strong> Se utilizó JavaScript (ES6 Modules) para añadir funcionalidad dinámica al panel de administración. Esto incluyó la implementación del sistema de autenticación de usuarios (registro e inicio de sesión) y la manipulación del DOM para mostrar u ocultar contenido según el estado de la sesión.</li>
+<li><strong>Configuración del Backend (Base de Datos):</strong> Se configuró un proyecto en <strong>Firebase</strong> y se integró la <strong>Realtime Database</strong>. Esta base de datos NoSQL es fundamental para la gestión remota de UIDs autorizados y para la creación de un registro de eventos en tiempo real, que muestra cada intento de acceso al sistema.</li>
+<li><strong>Despliegue en Servidor:</strong> El sitio web fue publicado en un entorno de producción. Se utilizó el servicio de hosting gratuito <strong>InfinityFree</strong> para alojar la aplicación. Los archivos del proyecto fueron transferidos al servidor mediante un cliente FTP (<strong>FileZilla</strong>), haciendo la aplicación accesible públicamente.</li>
+</ul>
+</div>
+</div>
+</li>
+<li><div class="timeline-badge"><i class="bi bi-journal-text"></i></div><div class="timeline-panel"><div class="timeline-heading"><h4 class="timeline-title">Fase 3 : Simulación y Montaje Inicial</h4><p><small class="text-muted"><i class="bi bi-calendar-event"></i> 24 de Septiembre de 2024</small></p></div><div class="timeline-body"><p>Se realizó el avance 2 del proyecto con foco en la simulación de apertura de la cerradura y la conexión del circuito para llevarlo a la práctica.</p><ul><li><p><b>Resultado: </b>El código fue verificado en simulación; luego se procedió al montaje real en protoboard.</p></li><li><p><b>Conexiones iniciales (Protoboard): </b>ESP32E al protoboard; GND (azul) al riel negativo; 3V3 (rojo) al riel positivo.</p></li><li><p><b>Placas probadas: </b>ESP32 Dev Module, ESP32 Espressif System, Arduino Nano ESP32.</p></li><li><p><b>Dificultad destacada: </b>El ESP32 no calza directo en el protoboard; se usaron jumpers para enlazarlo.</p></li><li><p><b>Wokwi: </b>Se armó circuito virtual (ESP32 + RC522 + LED + Resistor<br/>+ Botón) y se probaron lecturas RFID, LED en D4 y botón en D15.</p></li><li><p><b>Cableado clave (Wokwi/real): </b>LED: D4 → Resistencia 220Ω → GND. Botón: D15 ↔ GND<br/>(INPUT_PULLUP). RC522 (SPI): 3V3, GND, SDA→D5, RST→D22, SCK→D18, MOSI→D23, MISO→D19.</p></li><li><p><b>Nota del profesor (26 de septiembre): </b>Se sugirió probar distintos modelos de placas ESP-32E para mejorar la compatibilidad en<br/>el simulador Wokwi. Ejemplos de modelos disponibles en Wokwi: <em>ESP32 Dev Module, ESP32-WROOM-32, ESP32-PICO-D4, NodeMCU-32S</em></p></li></ul><p><p><a href="Documento/reporte avance 2.docx" rel="noopener noreferrer" target="_blank">Para ver documento en mas detalle.</a></p></p></div></div></li></ul>
+<!-- FIN DEL INFORME -->
+<!-- Materiales Adquiridos (Estructura Original) -->
+<section class="media-section">
+<h2>Materiales Adquiridos</h2>
+<p>A continuación, se muestran fotografías de los componentes adquiridos el 15 de agosto, los cuales son la base para el ensamblaje y las pruebas del prototipo físico de la cerradura.</p>
+<div class="carousel slide materials-carousel" data-bs-ride="carousel" id="materialsCarousel">
+<div class="carousel-indicators">
+<button aria-current="true" aria-label="Slide 1" class="active" data-bs-slide-to="0" data-bs-target="#materialsCarousel" type="button"></button>
+<button aria-label="Slide 2" data-bs-slide-to="1" data-bs-target="#materialsCarousel" type="button"></button>
+<button aria-label="Slide 3" data-bs-slide-to="2" data-bs-target="#materialsCarousel" type="button"></button>
+<button aria-label="Slide 4" data-bs-slide-to="3" data-bs-target="#materialsCarousel" type="button"></button>
+<button aria-label="Slide 5" data-bs-slide-to="4" data-bs-target="#materialsCarousel" type="button"></button>
+</div>
+<div class="carousel-inner">
+<div class="carousel-item active"><img alt="Fotografía del primer material adquirido" class="d-block carousel-img-clickable" data-bs-target="#imageModal" data-bs-toggle="modal" src="Imagenes/matarial2.jpeg"/></div>
+<div class="carousel-item"><img alt="Fotografía del segundo material adquirido" class="d-block carousel-img-clickable" data-bs-target="#imageModal" data-bs-toggle="modal" src="Imagenes/matarial3.jpeg"/></div>
+<div class="carousel-item"><img alt="Fotografía del tercer material adquirido" class="d-block carousel-img-clickable" data-bs-target="#imageModal" data-bs-toggle="modal" src="Imagenes/material1.jpeg"/></div>
+<div class="carousel-item"><img alt="Fotografía del cuarto material adquirido" class="d-block carousel-img-clickable" data-bs-target="#imageModal" data-bs-toggle="modal" src="Imagenes/material4.jpeg"/></div>
+<div class="carousel-item"><img alt="Fotografía del quinto material adquirido" class="d-block carousel-img-clickable" data-bs-target="#imageModal" data-bs-toggle="modal" src="Imagenes/material5.jpeg"/></div>
+</div>
+<button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#materialsCarousel" type="button"><span aria-hidden="true" class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span></button>
+<button class="carousel-control-next" data-bs-slide="next" data-bs-target="#materialsCarousel" type="button"><span aria-hidden="true" class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span></button>
+</div>
+</section>
+<!-- Galería de fase 3 -->
+<section class="media-section" id="avance2-galeria">
+<h2>Galería de fase 3</h2>
+<p>Imágenes de prueba de fase 3 del  proyecto.</p>
+<div class="carousel slide materials-carousel" data-bs-ride="carousel" id="avance2Carousel">
+<div class="carousel-indicators">
+<button aria-current="true" aria-label="Slide 1" class="active" data-bs-slide-to="0" data-bs-target="#avance2Carousel" type="button"></button>
+<button aria-label="Slide 2" data-bs-slide-to="1" data-bs-target="#avance2Carousel" type="button"></button>
+<button aria-label="Slide 3" data-bs-slide-to="2" data-bs-target="#avance2Carousel" type="button"></button>
+<button aria-label="Slide 4" data-bs-slide-to="3" data-bs-target="#avance2Carousel" type="button"></button>
+<button aria-label="Slide 5" data-bs-slide-to="4" data-bs-target="#avance2Carousel" type="button"></button>
+</div>
+<div class="carousel-inner">
+<div class="carousel-item active">
+<img alt="Prueba 1" class="d-block carousel-img-clickable" data-bs-target="#imageModal" data-bs-toggle="modal" src="Imagenes/prueba1.jpg"/>
+</div>
+<div class="carousel-item">
+<img alt="Prueba 2" class="d-block carousel-img-clickable" data-bs-target="#imageModal" data-bs-toggle="modal" src="Imagenes/prueba2.jpg"/>
+</div>
+<div class="carousel-item">
+<img alt="Prueba 3" class="d-block carousel-img-clickable" data-bs-target="#imageModal" data-bs-toggle="modal" src="Imagenes/prueba3.jpg"/>
+</div>
+<div class="carousel-item">
+<img alt="Prueba 4" class="d-block carousel-img-clickable" data-bs-target="#imageModal" data-bs-toggle="modal" src="Imagenes/prueba4.jpg"/>
+</div>
+<div class="carousel-item">
+<img alt="Prueba 5" class="d-block carousel-img-clickable" data-bs-target="#imageModal" data-bs-toggle="modal" src="Imagenes/prueba5.jpg"/>
+</div>
+</div>
+<button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#avance2Carousel" type="button"><span aria-hidden="true" class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span></button>
+<button class="carousel-control-next" data-bs-slide="next" data-bs-target="#avance2Carousel" type="button"><span aria-hidden="true" class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span></button>
+</div>
+</section>
+<!-- Video de Fase  3 -->
+<section class="media-section" id="avance2-video">
+<h2>Video de Fase 3</h2>
+<p>Simulación de apertura de la cerradura y montaje inicial.</p>
+<div class="ratio ratio-16x9">
+<video controls="True">
+<source src="Videos/video1.mp4" type="video/mp4"/>
+</video>
+</div>
+<div class="mt-3 d-flex gap-2">
+<a class="btn btn-primary" download="" href="Videos/video1.mp4">Descargar video</a>
+</div>
+</section>
+<!-- Demostración Interactiva -->
+<section class="progress-section text-center">
+<h2>Demostración Interactiva</h2>
+<p>Prueba el funcionamiento simulado de la cerradura. Presiona los botones para ver las animaciones de acceso aprobado o denegado.</p>
+<div class="lock-animation-container mx-auto" id="lock-animation-container">
+<div class="door-frame">
+<div class="door">
+<div class="door-handle"></div>
+</div>
+</div>
+<div class="card-reader">
+<div class="status-light"></div>
+<div class="card-slot"></div>
+</div>
+<div class="rfid-card">
+<i class="bi bi-cpu-fill"></i>
+</div>
+</div>
+<div class="d-flex gap-3 justify-content-center mt-4">
+<button class="btn btn-success" id="approveBtn">
+<i class="bi bi-check-circle"></i> Aprobar Acceso
+                </button>
+<button class="btn btn-danger" id="denyBtn">
+<i class="bi bi-x-circle"></i> Denegar Acceso
+                </button>
+</div>
+</section>
+<div class="text-center">
+<a class="btn-volver" href="index.html">Volver al Inicio</a>
+</div>
+</main>
+<!-- Modal para ver imagen en grande -->
+<div aria-hidden="true" aria-labelledby="imageModalLabel" class="modal fade" id="imageModal" tabindex="-1">
+<div class="modal-dialog modal-dialog-centered modal-lg">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="imageModalLabel">Vista Previa del Material</h5>
+<button aria-label="Close" class="btn-close btn-close-white" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body text-center">
+<img alt="Imagen ampliada del material" class="img-fluid" id="modalImage" src=""/>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="container">
+<p class="text-center">© 2025 Cerradura Smart RFID-BT. Todos los derechos reservados.</p>
+</div>
+</footer>
+<!-- Bootstrap JS -->
+<script crossorigin="anonymous" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"></script>
+<!-- Script para la animación de la cerradura (Ahora en un archivo externo) -->
+<script src="Javascript/animation-avance.js"></script>
+</body>
+</html>

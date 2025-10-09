@@ -1,0 +1,492 @@
+/* Variables de colores actualizadas - Tema Ultra Oscuro */
+:root {
+    --primary-tech: #64ffda;    /* Verde menta suave */
+    --secondary-tech: #82aaff;  /* Azul suave */
+    --accent-tech: #ffcb6b;     /* Ámbar/Dorado */
+    --dark-bg: #121212;       /* Gris muy oscuro */
+    --light-tech: #e0e0e0;      /* Blanco roto */
+    --container-bg: #1E1E1E;   /* Gris para contenedores */
+    --success-tech: #81c784;    /* Verde éxito suave */
+    --danger-tech: #e57373;     /* Rojo error suave */
+    --glass-border: rgba(100, 255, 218, 0.2);
+    --text-dark: #000;
+}
+
+/* Importar fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+/* Estilos base */
+body {
+    background: var(--dark-bg);
+    color: var(--light-tech);
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Navegación mejorada */
+.navbar {
+    background: rgba(30, 30, 30, 0.8) !important;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--glass-border);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 0.5rem 0;
+    min-height: 70px;
+}
+
+.navbar-brand {
+    font-family: 'Orbitron', monospace;
+    font-weight: 800;
+    color: var(--primary-tech) !important;
+    text-shadow: none;
+    transition: all 0.3s ease;
+    font-size: 1.4rem;
+}
+
+.navbar-brand:hover {
+    color: var(--secondary-tech) !important;
+    transform: scale(1.05);
+}
+
+.navbar-nav .nav-link {
+    color: var(--light-tech) !important;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    margin: 0 3px;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.navbar-nav .nav-link:hover {
+    background: rgba(100, 255, 218, 0.1);
+    color: var(--primary-tech) !important;
+    text-shadow: none;
+}
+
+.navbar-nav .nav-link.active {
+    background: rgba(100, 255, 218, 0.15);
+    color: var(--primary-tech) !important;
+    text-shadow: none;
+    box-shadow: none;
+    border: 1px solid var(--glass-border);
+}
+
+/* Botones de simulación */
+.btn-success, .btn-danger {
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+.btn-success:hover, .btn-danger:hover {
+    transform: translateY(-3px);
+}
+/* Dropdown mejorado (traído de avanze.css) */
+.dropdown-menu {
+    background: rgba(0, 0, 0, 0.98);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--primary-tech);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(100, 255, 218, 0.1);
+    margin-top: 10px;
+    padding: 0.5rem;
+}
+
+.dropdown-item {
+    color: var(--light-tech);
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    margin: 2px 0;
+    padding: 8px 15px;
+    font-weight: 500;
+}
+
+.dropdown-item:hover {
+    background: rgba(100, 255, 218, 0.15);
+    color: var(--primary-tech);
+    transform: translateX(5px);
+    text-shadow: none;
+}
+
+/* Contenedor principal */
+#app-container {
+    background: var(--container-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 25px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+    padding: 3rem;
+    max-width: 800px;
+    width: 100%;
+}
+
+/* Títulos */
+#app-container h1,
+#app-container h2,
+#app-container h3 {
+    background: linear-gradient(45deg, var(--primary-tech), var(--secondary-tech));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-family: 'Orbitron', monospace;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+/* Formularios */
+.form-control {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    color: var(--light-tech);
+    font-weight: 500;
+    padding: 12px 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: inset 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.form-control:focus {
+    background: rgba(0, 0, 0, 0.4);
+    border-color: var(--accent-tech);
+    box-shadow: 0 0 20px rgba(73, 166, 215, 0.3);
+    color: #ffffff;
+    outline: none;
+}
+
+.form-control::placeholder {
+    color: rgba(224, 224, 224, 0.5);
+}
+
+/* Botones */
+.btn {
+    border-radius: 12px;
+    font-weight: 600;
+    padding: 12px 24px;
+    transition: all 0.3s ease;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-primary {
+    background: var(--primary-tech);
+    box-shadow: 0 8px 25px rgba(100, 255, 218, 0.2);
+    color: var(--dark-bg);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(130, 170, 255, 0.25);
+    background: var(--secondary-tech);
+    color: var(--dark-bg);
+}
+
+.btn-success {
+    background: var(--primary-tech);
+    box-shadow: 0 8px 25px rgba(100, 255, 218, 0.2);
+    color: var(--dark-bg);
+}
+
+.btn-success:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(100, 255, 218, 0.3);
+    background: #81c784; /* Usando el verde de éxito */
+    color: var(--dark-bg);
+}
+
+.btn-danger {
+    background: var(--danger-tech);
+    box-shadow: 0 8px 25px rgba(229, 115, 115, 0.2);
+    color: #ffffff;
+}
+
+.btn-danger:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(229, 115, 115, 0.3);
+    background: #ef5350;
+    color: #ffffff;
+}
+
+.btn-outline-secondary {
+    background: transparent;
+    border: 1px solid var(--primary-tech);
+    color: var(--primary-tech);    
+}
+
+.btn-outline-secondary:hover {
+    background: rgba(100, 255, 218, 0.1);
+    border-color: var(--primary-tech);
+    color: var(--primary-tech);
+}
+
+/* Secciones personalizadas del panel en lugar de sobreescribir .bg-light */
+.panel-section {
+    background: rgba(0, 0, 0, 0.2) !important;
+    border: 1px solid var(--glass-border);
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.panel-section:hover {
+    transform: none;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    border-color: var(--accent-tech);
+    background: rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Mensajes */
+#auth-message,
+#add-uid-message,
+#verify-uid-message {
+    border-radius: 8px;
+    padding: 8px 12px;
+    margin-top: 10px;
+}
+
+.text-primary {
+    color: var(--primary-tech) !important;
+}
+
+/* Lista de eventos */
+#event-list {
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 0;
+}
+
+#event-list li {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--glass-border);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 15px;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    box-shadow: none;
+}
+
+#event-list li:hover {
+    border-color: var(--accent-tech);
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* Clases de texto de Bootstrap */
+.text-danger {
+    color: var(--danger-tech) !important;
+}
+
+.text-success {
+    color: var(--success-tech) !important;
+}
+
+.text-info {
+    color: var(--accent-tech) !important;
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+}
+
+.text-muted {
+    color: rgba(224, 224, 224, 0.6) !important;
+}
+
+.fw-bold {
+    font-weight: 700 !important;
+}
+
+.small {
+    font-size: 0.875rem !important;
+}
+
+/* Spinner de carga */
+.spinner-border {
+    color: var(--primary-tech) !important;
+    width: 3rem;
+    height: 3rem;
+    border-width: 0.3em;
+}
+
+
+
+.font-monospace {
+    font-family: 'Orbitron', monospace;
+    color: var(--secondary-tech);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #app-container {
+        padding: 2rem 1.5rem;
+        margin: 1rem;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .form-control {
+        padding: 10px 14px;
+    }
+}
+
+/* Scrollbar personalizada */
+#event-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+#event-list::-webkit-scrollbar-track {
+    background: rgba(100, 255, 218, 0.1);
+    border-radius: 10px;
+}
+
+#event-list::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, var(--primary-tech), var(--accent-tech));
+    border-radius: 10px;
+}
+
+#event-list::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, var(--accent-tech), var(--primary-tech));
+}
+
+/* Footer personalizado */
+.footer-tech {
+    background: var(--container-bg);
+    border-top: 1px solid var(--glass-border);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+    color: var(--light-tech);
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+/* --- Estilos para la Animación de la Cerradura --- */
+.lock-animation-container {
+    position: relative;
+    width: 250px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.door-frame {
+    width: 120px;
+    height: 180px;
+    border: 5px solid var(--secondary-tech);
+    border-radius: 5px;
+    position: absolute;
+    left: 0;
+    bottom: 0;    
+}
+
+.door {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(145deg, #222, #111);
+    position: relative;
+    transform-origin: left;
+    transition: transform 0.8s ease-in-out;
+    border-right: 2px solid var(--primary-tech);
+}
+
+.door-handle {
+    width: 8px;
+    height: 25px;
+    background: var(--primary-tech);
+    border-radius: 3px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 0 8px var(--primary-tech);
+}
+
+.card-reader {
+    width: 20px;
+    height: 80px;
+    background: #333;
+    border: 2px solid var(--glass-border);
+    border-radius: 5px;
+    position: absolute;
+    left: 135px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.status-light {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #555;
+    margin-bottom: 10px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.card-slot {
+    width: 4px;
+    height: 40px;
+    background: var(--dark-bg);
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.5);
+}
+
+.rfid-card {
+    width: 50px;
+    height: 80px;
+    background: linear-gradient(45deg, var(--light-tech), #ccc);
+    border: 2px solid var(--primary-tech);
+    border-radius: 8px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: var(--primary-tech);
+    cursor: pointer;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+}
+
+/* --- Keyframes para las animaciones --- */
+
+@keyframes card-swipe {
+    0% { transform: translate(0, -50%); }
+    30% { transform: translate(-80px, -50%); } /* Tarjeta se acerca al lector */
+    70% { transform: translate(-80px, -50%); } /* Pausa en el lector */
+    100% { transform: translate(0, -50%); } /* Tarjeta vuelve a su sitio */
+}
+
+@keyframes door-open-close {
+    0%, 25% { transform: perspective(1200px) rotateY(0deg); } /* Puerta cerrada mientras se lee la tarjeta */
+    50% { transform: perspective(1200px) rotateY(-110deg); } /* Puerta se abre */
+    75% { transform: perspective(1200px) rotateY(-110deg); } /* Puerta se mantiene abierta */
+    100% { transform: perspective(1200px) rotateY(0deg); } /* Puerta se cierra */
+}
+
+@keyframes light-granted {
+    25%, 80% { background-color: var(--success-tech); box-shadow: 0 0 15px var(--success-tech); }
+}
+
+@keyframes light-denied {
+    25%, 80% { background-color: var(--danger-tech); box-shadow: 0 0 15px var(--danger-tech); }
+}
+
+/* --- Clases que activan las animaciones --- */
+
+.lock-animation-container.access-granted .rfid-card { animation: card-swipe 4s ease-in-out; }
+.lock-animation-container.access-granted .door { animation: door-open-close 4s ease-in-out; }
+.lock-animation-container.access-granted .status-light { animation: light-granted 4s ease-in-out; }
+
+.lock-animation-container.access-denied .rfid-card { animation: card-swipe 3s ease-in-out; }
+.lock-animation-container.access-denied .status-light { animation: light-denied 3s ease-in-out; }

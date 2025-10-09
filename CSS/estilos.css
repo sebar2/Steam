@@ -1,0 +1,354 @@
+/* Importar fuentes modernas */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+/* Variables CSS para colores electrónicos - Tema Ultra Oscuro */
+/* Nueva paleta de colores neutra y profesional */
+:root {
+    --primary-tech: #64ffda;    /* Verde menta suave */
+    --secondary-tech: #82aaff;  /* Azul suave */
+    --accent-tech: #ffcb6b;     /* Ámbar/Dorado */
+    --dark-tech: #121212;       /* Gris muy oscuro */
+    --light-tech: #e0e0e0;      /* Blanco roto */
+    --container-bg: #1E1E1E;   /* Gris para contenedores */
+    --success-tech: #81c784;    /* Verde éxito suave */
+    --danger-tech: #e57373;     /* Rojo error suave */
+    --glass-border: rgba(100, 255, 218, 0.2);
+}
+
+/* Estilos base */
+body {
+    font-family: 'Rajdhani', sans-serif;
+    background-color: var(--dark-tech) !important;
+    color: var(--light-tech);
+    overflow-x: hidden;
+}
+
+/* Header y navegación tecnológica */
+header {
+    background: rgba(30, 30, 30, 0.8);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--glass-border);
+    box-shadow: 0 8px 32px rgba(0, 255, 65, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    font-family: 'Orbitron', monospace;
+    font-weight: 900;
+    font-size: 1.4rem;
+    background: linear-gradient(45deg, var(--primary-tech), var(--secondary-tech));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.nav-link {
+    font-weight: 500;
+    position: relative;
+    transition: all 0.3s ease;
+    color: var(--light-tech) !important;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary-tech), var(--secondary-tech));
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::before {
+    width: 100%;
+}
+
+.nav-link:hover {
+    color: var(--primary-tech) !important;    
+}
+
+.nav-link.active {
+    color: var(--primary-tech) !important;
+    font-weight: 700;
+}
+
+.carousel-item {
+    position: relative;
+}
+
+.carousel-item img {
+    filter: brightness(0.8) contrast(1.2);
+    transition: filter 0.3s ease;
+}
+
+.carousel-item:hover img {
+    filter: brightness(1) contrast(1.1);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    background: rgba(30, 30, 30, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: auto 20px;
+    border: 1px solid var(--glass-border);
+}
+
+.carousel-indicators button {
+    background: var(--primary-tech);
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+
+.carousel-indicators button.active {
+    background: var(--accent-tech);
+    transform: scale(1.2);    
+}
+
+/* Secciones principales */
+section {
+    background: var(--container-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    margin: 2rem 0;
+    position: relative;
+    transition: all 0.4s ease;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+section:hover {
+    border-color: var(--primary-tech);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Títulos con efecto tecnológico */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Orbitron', monospace;
+    font-weight: 600;
+    background: linear-gradient(45deg, var(--primary-tech), var(--secondary-tech));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1.5rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: 2rem;
+    border-bottom: 2px solid var(--glass-border);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+/* Párrafos y texto */
+p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: var(--light-tech);
+}
+
+/* Listas tecnológicas */
+ul, ol {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    padding: 2rem 2.5rem;
+    border-left: 4px solid var(--primary-tech);
+    margin: 1.5rem 0;
+    transition: border-color 0.3s ease;
+    box-shadow: inset 0 2px 10px rgba(0,0,0,0.4);
+}
+
+ul:hover, ol:hover {
+    border-left-color: var(--accent-tech);
+}
+
+/* Efectos de hover para elementos de lista */
+li {
+    margin-bottom: 1rem;
+    position: relative;
+    padding-left: 1.5rem;
+    transition: color 0.3s ease;
+    color: var(--light-tech);
+}
+
+li:hover {
+    color: var(--primary-tech);
+}
+
+li::before {
+    content: '▶';
+    position: absolute;
+    left: 0;
+    color: var(--primary-tech);    
+    transition: all 0.3s ease;
+}
+
+li:hover::before {
+    color: var(--accent-tech);
+    transform: scale(1.2);    
+}
+
+/* Listas anidadas con mejor visibilidad */
+ul ul:hover, ol ol:hover {
+    border-left-color: var(--accent-tech);
+}
+
+/* Elementos de lista anidados */
+ul ul li, ol ol li {
+    color: rgba(224, 224, 224, 0.85);
+    margin-bottom: 0.8rem;
+}
+
+ul ul li:hover, ol ol li:hover {
+    color: #ffffff;
+}
+
+ul ul li::before, ol ol li::before {
+    color: var(--secondary-tech);
+}
+
+ul ul li:hover::before, ol ol li:hover::before {
+    color: var(--accent-tech);
+}
+
+/* Artículos */
+article {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 1.5rem 0;
+    border: 1px solid var(--glass-border);
+    transition: all 0.3s ease;
+}
+
+article:hover {
+    background: rgba(0, 0, 0, 0.3);
+    border-color: var(--primary-tech);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Separadores */
+hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--glass-border), transparent);
+    margin: 2rem 0;
+}
+
+/* Footer tecnológico */
+footer {
+    background: var(--container-bg);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid var(--glass-border);
+    margin-top: 3rem;
+}
+
+footer p {
+    margin: 0;
+    padding: 1rem 0;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Efectos de hover para elementos interactivos */
+.btn {
+    background: var(--primary-tech);
+    border: none;
+    border-radius: 10px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    background: var(--secondary-tech);
+    box-shadow: 0 10px 25px rgba(130, 170, 255, 0.2);
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--dark-tech);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--primary-tech), var(--accent-tech));
+    border-radius: 5px;
+    border: 2px solid var(--dark-tech);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, var(--accent-tech), var(--primary-tech));
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    body {
+        font-size: 0.9rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    section {
+        padding: 2rem 1rem;
+        margin: 1rem 0;
+    }
+
+    .navbar-brand {
+        font-size: 1.4rem;
+    }
+}
+
+.important-text {
+    background: linear-gradient(45deg, var(--primary-tech), var(--secondary-tech));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+}
+
+/* Efectos de hover para botones */
+.btn {
+    background: var(--primary-tech);
+    color: #000 !important;
+    border: none;
+    border-radius: 10px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(100, 255, 218, 0.2);
+    background: var(--secondary-tech);
+}

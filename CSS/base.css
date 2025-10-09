@@ -1,0 +1,216 @@
+/* ==========================================================================
+   Archivo Base de Estilos
+   Contiene todos los estilos comunes del sitio (body, navbar, footer, etc.)
+   ========================================================================== */
+
+/* Variables de colores - Tema Ultra Oscuro */
+:root {
+    --primary-tech: #00ff88;      /* Verde eléctrico */
+    --accent-tech: #00b8ff;       /* Azul eléctrico */
+    --neon-purple: #8a2be2;       /* Púrpura neón suave */
+    --neon-pink: #ff1493;         /* Rosa neón suave */
+    --neon-yellow: #ffd700;       /* Amarillo neón suave */
+    --neon-red: #ff4444;          /* Rojo neón suave */
+    --dark-bg: #000000;           /* Fondo completamente negro */
+    --glass-bg: rgba(0, 255, 136, 0.03);  /* Glassmorphism muy sutil */
+    --glass-border: rgba(0, 255, 136, 0.15); /* Borde muy sutil */
+    --light-tech: #f0f8ff;        /* Texto muy claro */
+    --text-dark: #000000;         /* Texto negro */
+}
+
+/* Importar fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+/* Estilos base */
+body {
+    background: linear-gradient(135deg, var(--dark-bg), #0a0a0a);
+    color: var(--light-tech);
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Fondo animado */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(0, 255, 136, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(0, 184, 255, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(138, 43, 226, 0.03) 0%, transparent 50%);
+    animation: backgroundShift 20s ease-in-out infinite;
+    z-index: -1;
+}
+
+@keyframes backgroundShift {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    25% { transform: translate(-10px, -10px) scale(1.1); }
+    50% { transform: translate(10px, -5px) scale(0.9); }
+    75% { transform: translate(-5px, 10px) scale(1.05); }
+}
+
+/* Efecto de partículas flotantes */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, var(--primary-tech), transparent),
+        radial-gradient(2px 2px at 40px 70px, var(--accent-tech), transparent),
+        radial-gradient(1px 1px at 90px 40px, var(--neon-purple), transparent),
+        radial-gradient(1px 1px at 130px 80px, var(--neon-pink), transparent),
+        radial-gradient(2px 2px at 160px 30px, var(--neon-yellow), transparent);
+    background-repeat: repeat;
+    background-size: 200px 100px;
+    animation: particleFloat 15s linear infinite;
+    opacity: 0.15;
+    z-index: -1;
+}
+
+@keyframes particleFloat {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(-100px); }
+}
+
+/* Navegación mejorada */
+.navbar {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.98)) !important;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border-bottom: 2px solid var(--primary-tech);
+    box-shadow: 0 4px 20px rgba(0, 255, 136, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 0.5rem 0;
+    min-height: 70px;
+}
+
+.navbar-brand {
+    font-family: 'Orbitron', monospace;
+    font-weight: 800;
+    color: var(--primary-tech) !important;
+    text-shadow: 0 0 15px rgba(0, 255, 65, 0.7);
+    transition: all 0.3s ease;
+    font-size: 1.4rem;
+}
+
+.navbar-brand:hover {
+    text-shadow: 0 0 25px rgba(0, 255, 65, 1);
+    transform: scale(1.05);
+}
+
+.navbar-nav .nav-link {
+    color: var(--light-tech) !important;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    margin: 0 3px;
+    padding: 8px 12px;
+    position: relative;
+    overflow: hidden;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.navbar-nav .nav-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 136, 0.15), transparent);
+    transition: left 0.5s ease;
+}
+
+.navbar-nav .nav-link:hover::before {
+    left: 100%;
+}
+
+.navbar-nav .nav-link:hover {
+    background: rgba(0, 255, 136, 0.08);
+    color: var(--primary-tech) !important;
+    text-shadow: 0 0 10px rgba(0, 255, 136, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 255, 136, 0.15);
+}
+
+.navbar-nav .nav-link.active {
+    background: rgba(0, 255, 65, 0.2);
+    color: var(--primary-tech) !important;
+    text-shadow: 0 0 15px rgba(0, 255, 65, 0.8);
+    box-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
+    border: 1px solid var(--primary-tech);
+}
+
+/* Dropdown mejorado */
+.dropdown-menu {
+    background: rgba(0, 0, 0, 0.98);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--primary-tech);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 255, 136, 0.2);
+    margin-top: 10px;
+    padding: 0.5rem;
+}
+
+.dropdown-item {
+    color: var(--light-tech);
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    margin: 2px 0;
+    padding: 8px 15px;
+    font-weight: 500;
+}
+
+.dropdown-item:hover {
+    background: rgba(0, 255, 136, 0.15);
+    color: var(--primary-tech);
+    transform: translateX(5px);
+    text-shadow: 0 0 8px rgba(0, 255, 136, 0.4);
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.98));
+    border-top: 2px solid var(--primary-tech);
+    box-shadow: 0 -4px 20px rgba(0, 255, 136, 0.2);
+    color: var(--light-tech);
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: auto; /* Asegura que el footer se quede abajo */
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--dark-bg);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--primary-tech), var(--accent-tech));
+    border-radius: 10px;
+    border: 2px solid var(--dark-bg);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, var(--accent-tech), var(--primary-tech));
+    box-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+}

@@ -214,3 +214,30 @@ footer {
     background: linear-gradient(180deg, var(--accent-tech), var(--primary-tech));
     box-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
 }
+
+/* Dropdown mejorado (traído de avanze.css y panel.css para uso global) */
+.dropdown-menu {
+    background: rgba(0, 0, 0, 0.98);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--primary-tech);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(100, 255, 218, 0.1);
+    margin-top: 10px;
+    padding: 0.5rem;
+}
+
+.dropdown-item {
+    color: var(--light-tech);
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    margin: 2px 0;
+    padding: 8px 15px;
+    font-weight: 500;
+}
+
+.dropdown-item:hover {
+    background: rgba(100, 255, 218, 0.15);
+    color: var(--primary-tech);
+    transform: translateX(5px);
+    text-shadow: none;
+}
